@@ -4,25 +4,6 @@ const port = 3000;
 const path = require('path');
 const multer = require('multer');
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/index.html'));
-// })
-
-// app.use((req,res,next) => {
-//     console.log('모든 요청에 다 실행 됩니다.');
-//     next();
-// });
-
-// app.get('/',(req, res) => {
-//     console.log('GET / 요청에서만 실행 됩니다.');
-// },(req, res) => {
-//     throw new Error('에러는 에러 처리 미들웨어로 갑니다.');
-// });
-
-// app.use((err, req, res, next) => {
-//     console.error(err);
-//     res.status(500).send(err.message);
-// });
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, done) { //업로드해서 저장할곳
